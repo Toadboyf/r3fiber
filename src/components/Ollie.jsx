@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import { Decal, Float, Sparkles, useGLTF, useTexture } from "@react-three/drei";
 
 export function Ollie(props) {
-  const { nodes, materials } = useGLTF("/models/Ollie.gltf");
-  const { pumpkin } = useTexture('/pumpkin.png');
+  const { nodes, materials } = useGLTF("./models/Ollie.gltf");
+
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -77,4 +77,4 @@ export function Ollie(props) {
   );
 }
 
-useGLTF.preload("/Ollie.gltf");
+useGLTF.preload("./models/Ollie.gltf");

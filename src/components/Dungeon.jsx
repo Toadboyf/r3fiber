@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dungeon(props) {
-  const { nodes, materials } = useGLTF("/models/dungeonBuild.gltf");
+  const { nodes, materials } = useGLTF("./models/dungeonBuild.gltf");
   return (
     <group {...props} dispose={null}>
       <pointLight
@@ -31,4 +31,4 @@ export function Dungeon(props) {
   );
 }
 
-useGLTF.preload("/dungeonBuild.gltf");
+useGLTF.preload("./models/dungeonBuild.gltf");
