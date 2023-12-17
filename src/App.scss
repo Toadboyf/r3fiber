@@ -7,15 +7,5 @@ html, body, #root, #canvas-container {
   padding: 0;
   position: relative;
   overflow: hidden;
-
-  &#root {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    
-  }
-
-  &#canvas-container {
-    background-color: black;
-  }
+  background-color: black;
 }
