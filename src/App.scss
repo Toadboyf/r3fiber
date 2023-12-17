@@ -11,11 +11,11 @@ html, body, #root, #canvas-container {
   &#root {
     display: flex;
     align-items: center;
-    background-color: $tertiary-4;
+    background-color: black;
     
   }
 
   &#canvas-container {
-    background-color: $bg;
+    background-color: black;
   }
 }
