@@ -8,11 +8,13 @@ import { Vector2, Vector3 } from 'three'
 import { lerp } from 'three/src/math/MathUtils'
 
 function App() { 
+  //set camera zoom on page load.
+  const zoom = window.innerWidth <= 470 ? 0.5 : 1;
 
   return (
     <div id='canvas-container'>
-      <Canvas camera={{position: [0,0,0]}}>
-        <MobileUpdate />
+      <Canvas camera={{position: [0,0,0], zoom: zoom}}>
+        
         {/* <ambientLight intensity={0.1} /> */}
         {/* <directionalLight /> */}
         {/* <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} /> */}
@@ -35,7 +37,7 @@ function App() {
 
         <Dungeon position={[0,-1,0]} />
         <Rig />
-        
+        <MobileUpdate />
       </Canvas>
     </div>
   )
@@ -52,14 +54,11 @@ function Rig() {
 
 function MobileUpdate() {
   const { camera, size } = useThree();
-  useFrame(() => {
-    if(size.width <= 470) {//mobile breakpoint
-      camera.zoom = 0.5;
-    } else {
-      camera.zoom = 1;
-    }
-  })
-  
+  if(size.width <= 470) {//mobile breakpoint
+    camera.zoom = 0.5;
+  } else {
+    camera.zoom = 1;
+  }
 }
 
 export default App
