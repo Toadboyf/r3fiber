@@ -1,1 +1,0 @@
-html,body,#root,#canvas-container{width:100vw;height:100vh;margin:0;padding:0;position:relative;overflow:hidden}html#root,body#root,#root#root,#canvas-container#root{display:flex;align-items:center;background-color:#000}html#canvas-container,body#canvas-container,#root#canvas-container,#canvas-container#canvas-container{background-color:#000}
